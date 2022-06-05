@@ -8,23 +8,54 @@
 
 <ion-content [fullscreen]="true" color="light">
 
-<ion-searchbar placeholder="Pesquisar"></ion-searchbar>
+  <ion-searchbar placeholder="Pesquisar"></ion-searchbar>
 
-<ion-list>
-  <ion-item lines="full">
-    <ion-thumbnail slot="start">
-      <img src="https://i.ytimg.com/vi/iwMTV-03dsw/hqdefault.jpg?sqp=-oaymwEjCOADEI4CSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDszwZH80HtWWl05qz8usKqRxll0A">
-    </ion-thumbnail>
-    <ion-label class="ion-text-wrap">
-      <div>
-        <h1>a GAMBIARRA mais INÚTIL que já foi feita!</h1>
-        <p>República Coisa de Nerd</p>
-      </div>
-    </ion-label>
-    <ion-chip color="success" outline>
-      <ion-label>10 min</ion-label>
-    </ion-chip>
-  </ion-item>
-</ion-list>
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item lines="full">
+        <ion-thumbnail slot="start">
+          <img
+            src="https://i.ytimg.com/vi/iwMTV-03dsw/hqdefault.jpg?sqp=-oaymwEjCOADEI4CSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDszwZH80HtWWl05qz8usKqRxll0A">
+        </ion-thumbnail>
+        <ion-label class="ion-text-wrap">
+          <div>
+            <h1>a GAMBIARRA mais INÚTIL que já foi feita!</h1>
+            <p>República Coisa de Nerd</p>
+          </div>
+        </ion-label>
+        <ion-chip color="success" outline>
+          <ion-label>10 min</ion-label>
+        </ion-chip>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="danger">
+          <ion-icon slot="icon-only" name="heart"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item lines="full">
+        <ion-thumbnail slot="start">
+          <img
+            src="https://i.ytimg.com/vi/QLWC4D7XO0E/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDn4p2x7lPVEiUP52eNREfrl0u5hQ">
+        </ion-thumbnail>
+        <ion-label class="ion-text-wrap">
+          <div>
+            <h1>DOGO ARGENTINO, O MAIS EFICIENTE PARA GUARDA! | RICHARD RASMUSSEN</h1>
+            <p>Richard Rasmussen</p>
+          </div>
+        </ion-label>
+        <ion-chip color="success" outline>
+          <ion-label>28 min</ion-label>
+        </ion-chip>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="danger">
+          <ion-icon slot="icon-only" name="heart"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 
 </ion-content>
