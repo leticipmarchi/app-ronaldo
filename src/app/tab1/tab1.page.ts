@@ -3,7 +3,9 @@ import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
 import { IVideo } from '../models/IVideo.model';
+import { IListaVideos, IVideoAPI } from '../models/IVideoAPI.model';
 import { DadosService } from '../services/dados.service';
+import { VideoService } from '../services/video.service';
 
 @Component({
   selector: 'app-tab1',
@@ -12,7 +14,7 @@ import { DadosService } from '../services/dados.service';
 })
 export class Tab1Page {
 
-  titulo = 'Galeria';
+  titulo = 'Lista de Filmes';
 
   listaVideos: IVideo[] = [
     {
@@ -38,13 +40,27 @@ export class Tab1Page {
     }
   ];
 
+  listaFilmes: IListaVideos;
+
   constructor(
     public alertController: AlertController,
     public toastController: ToastController,
     public dadosService: DadosService,
+    public videoService: VideoService,
     public route: Router) { }
 
-  exibirVideo(video: IVideo) {
+  buscarVideos(evento: any) {
+    console.log(evento.target.value);
+    const busca = evento.target.value;
+    if (busca && busca.trim() !== '') {
+      this.videoService.buscarVideos(busca).subscribe(dados => {
+        console.log(dados);
+        this.listaFilmes = dados;
+      });
+    }
+  }
+
+  exibirVideo(video: IVideoAPI) {
     this.dadosService.guardarDados('video', video);
     this.route.navigateByUrl('/dados-video');
   }
