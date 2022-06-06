@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Dados do vídeo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+
+  <ion-card>
+    <ion-card-header>
+      <img [src]="video.imagem" />
+    </ion-card-header>
+
+    <ion-card-content>
+      <h1>{{video.nome}}</h1>
+      <p>{{video.canal}} - {{video.tempo}}</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
