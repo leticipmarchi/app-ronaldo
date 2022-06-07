@@ -13,12 +13,17 @@
 
   <ion-card>
     <ion-card-header>
-      <img [src]="video.imagem" />
+      <img *ngIf="video.poster_path" src="https://www.themoviedb.org/t/p/w500/{{video.poster_path}}" />
+      <ion-icon *ngIf="!video.poster_path" name="videocam-off"></ion-icon>
     </ion-card-header>
 
     <ion-card-content>
-      <h1>{{video.nome}}</h1>
-      <p>{{video.canal}} - {{video.tempo}}</p>
+      <h1>{{video.title}}</h1>
+      <p>{{video.original_language}}</p>
+      <ion-chip [color]="video.vote_average < 5 ? 'danger' : ((video.vote_average < 7) ? 'warning' : 'success')"
+      outline>
+      <ion-label>{{video.vote_average}}</ion-label>
+    </ion-chip>
     </ion-card-content>
   </ion-card>
 

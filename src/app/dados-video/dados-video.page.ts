@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IVideo } from '../models/IVideo.model';
+import { IVideoAPI } from '../models/IVideoAPI.model';
 import { DadosService } from '../services/dados.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { DadosService } from '../services/dados.service';
 })
 export class DadosVideoPage implements OnInit {
 
-  video: IVideo;
+  video: IVideoAPI;
 
   constructor(public dadosService: DadosService) { }
 
