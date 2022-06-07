@@ -6,18 +6,18 @@
       <ion-card-title class="ion-text-center">Lista de Filmes</ion-card-title>
       <ion-item inline="none" color="dark">
         <ion-label position="floating">E-mail</ion-label>
-        <ion-input type="email" [(ngModel)]="email"></ion-input>
+        <ion-input placeholder="admin@admin.com" type="email" [(ngModel)]="email"></ion-input>
       </ion-item>
       <ion-item inline="none" color="dark">
         <ion-label position="floating">Senha</ion-label>
-        <ion-input type="password" [(ngModel)]="senha"></ion-input>
+        <ion-input placeholder="admin" type="password" [(ngModel)]="senha"></ion-input>
       </ion-item>
       <ion-button (click)="login()" expand="full" fill="outline" color="light">
         ENTRAR
       </ion-button>
-      <ion-button expand="full" fill="clear" color="light">
+      <!-- <ion-button expand="full" fill="clear" color="light">
         REGISTRAR
-      </ion-button>
+      </ion-button> -->
     </ion-card>
   </div>
 </ion-content>
